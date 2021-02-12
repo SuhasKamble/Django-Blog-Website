@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.main-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo h2{
+    color: black;
+}
+
+.main-container h3{
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+
+.hero{
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.45) url('./pexels-pixabay-261577.jpg')no-repeat center center/cover;
+    background-blend-mode: darken;
+    color: white;
+}
+
+.navbar{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 0 1rem;
+}
+
+.nav-links li a{
+    padding:0.5rem 0 ;
+    color: black;
+}
+
+.nav-links{
+    display: flex;
+    width: 50%;
+    /* background: lightblue; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+#search{
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border: 2px solid black;
+    width: 200px;
+}
+
+#search-btn{
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 500;
+    background: white;
+    background-color: #f7b500;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    transition: all 0.4s ease-in;
+}
+
+#search-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.hero-container{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.active{
+    border-bottom: 4px solid white;
+    font-weight: 700;
+}
+
+.hero-container h1{
+    font-size: 3.5rem;
+    margin-top: 10px;
+    letter-spacing: 1.6px;
+}
+
+.hero-container p{
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+
+}
+
+.btn{
+    padding: 0.6rem 2rem;
+    font-size: 18px;
+    margin-top: 1rem;
+    background-color: white;
+    font-weight: 500;
+    /* letter-spacing: 2px; */
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    text-align: center;
+
+}
+
+.btn:hover{
+    letter-spacing: 2px;
+}
+
+.blog-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+.blog-card{
+    border: 1px solid black;
+    margin: 1.5rem 1rem;
+    height: auto;
+}
+
+.blog-card img{
+    width: 100%;
+}
+
+.blog-info{
+    padding: 15px;
+}
+
+.blog-info h6{
+    font-size: 1.2rem;
+}
+
+.blog-btn{
+    padding: 0.5rem 1.3rem;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #428bca;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+
+footer{
+    padding: 1rem;
+    background: black;
+    color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+
+}
+
+footer p{
+    font-size: 14px;
+}
+
+.main-box{
+    height: 50vh;
+    background: rgba(0, 0, 0, 0.55) url('./pexels-pixabay-261577.jpg')no-repeat center center/cover;
+    position: relative;
+    background-blend-mode: darken;
+
+}
+
+.main-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.main-text h1{
+    font-size: 2.7rem;
+    color: white;
+}
+
+
+#contact-form{
+    max-width: 600px;
+    margin: auto;
+    /* background: lightblue; */
+    padding: 10px;
+}
+
+#contact-form label{
+    line-height: 2.7;
+
+}
+
+.submit-btn{
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+.submit-btn:hover{
+    opacity: 0.9;
+}
+.input-field{
+    width: 100%;
+    font-size: 19px;
+    background: #eaeaea;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+
+.post-container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.post-container img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.post-info{
+    margin-top: 1rem;
+}
+.post-info h2{
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.post-info p{
+    color: rgb(105, 104, 104);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+.alert{
+    height: 50px;
+    background: black;
+    color: white;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    transition: all 0.3s ease;
+
+}
+.alert .fas{
+    cursor: pointer;
+}
+
+.alert.success{
+    background: green;
+}
+
+.alert.error{
+    background: tomato;
+}
+
+@media(max-width:1200px){
+    .blog-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.burger{
+  display: none;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.about-wrapper img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;   
+}
+
+.about-info{
+    padding: 15px;
+}
+
+@media(max-width:780px){
+    .blog-container{
+        grid-template-columns: 1fr ;
+    }
+}
+
+
+
+/* Navbar mediaquery  */
+
+@media(max-width:780px){
+
+    .nav-links{
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      top:0;
+      left:-100%;
+      background: black;
+      z-index: 1;
+      justify-content: space-evenly;
+      flex-direction:column;
+      overflow: hidden;
+      transition: 0.3s ease;
+    }
+    .nav-links.show{
+      left: 0%;
+    }
+    .nav-links li a{
+      color:#fff;
+    }
+    .burger{
+      display: block;
+      z-index: 3;
+      background: white;
+      border-radius: 5px;
+      padding: 5px 10px;
+
+    }
+    .burger .fas{
+      font-size: 1.6rem;
+    }
+    .hero-container{
+      width: 100%
+    }
+
+    .hero-container h1{
+      font-size:2.2rem;
+    }
+    .hero-container p{
+      width: 100%
+    }
+    .post-container{
+        margin: 0;
+        padding-top: 10px;
+    }
+    .post-container img{
+        height: 300px;
+    }
+    .post-info{
+        padding: 15px;
+    }
+
+    .main-text{
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-box h1{
+        font-size: 2.2rem;
+    }
+    .about-wrapper img{
+        height: 400px;
+    }
+}

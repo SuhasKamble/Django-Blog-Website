@@ -4,20 +4,20 @@ from django.shortcuts import render, HttpResponse
 
 
 def home(request):
-    return HttpResponse("This is home page")
+    return render(request, 'home/index.html')
 
 
 def about(request):
-    return HttpResponse("This is about page")
+    return render(request, 'home/about.html')
 
 
 def contact(request):
-    return HttpResponse("This is ConTact Page")
+    return render(request, 'home/contact.html')
 
 
 def login(request):
-    return HttpResponse("This is login")
+    return render(request, 'home/login.html')
 
 
 def signup(request):
-    return HttpResponse("This is signup")
+    return render(request, 'home/signup.html')
