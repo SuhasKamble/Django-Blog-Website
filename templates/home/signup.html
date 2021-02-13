@@ -6,25 +6,26 @@
 <div class="signup-container">
 
 
-    <form class="signup-form">
+    <form class="signup-form" action="/signup" method="POST">
+        {% csrf_token %}
         <h3>SignUp</h3>
         <label for="username">Username</label>
-        <input type="text" class="inputfield">
+        <input type="text" name="username" class="inputfield" required autocomplete="off">
 
         <label for="fname">First Name</label>
-        <input type="text" class="inputfield">
+        <input type="text" name="fname" class="inputfield" required autocomplete="off">
 
         <label for="lname">Last Name</label>
-        <input type="text" class="inputfield">
+        <input type="text" name="lname" class="inputfield" required autocomplete="off">
 
         <label for="username">Email</label>
-        <input type="email" class="inputfield">
+        <input type="email" name="email" class="inputfield" required autocomplete="off">
 
         <label for="Password">Password</label>
-        <input type="password" class="inputfield">
+        <input type="password" name="pass1" class="inputfield" required autocomplete="off">
 
         <label for="password">Confirm Password</label>
-        <input type="password" class="inputfield">
+        <input type="password" name="pass2" class="inputfield" required autocomplete="off">
 
         <button class="send-btn" type="submit">Send</button>
 

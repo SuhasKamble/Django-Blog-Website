@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Search{% endblock title %}
+
+{% block body %}
+
+
+<section class="popular-blogs" style="min-height: 82vh;">
+    <div class="main-container">
+        <h3 style="text-align:left">Search Result: </h3>
+
+        {% if allPosts|length < 1 %} <div class="blog-container">
+            <p><b>{{query | truncatechars:150}}</b>... did not match any documents.</p>
+            <br>
+            <p>Suggestions:</p>
+
+            <ul>
+                <li><b>-</b> Make sure that all words are spelled correctly.</li>
+                <li><b>-</b> Try different keywords.</li>
+                <li> <b>-</b> Try more general keywords</li>
+            </ul>
+    </div>
+    {% endif %}
+    <div class="blog-container">
+        {% for post in allPosts %}
+        <div class="blog-card">
+            <div class="blog-info">
+                <h6>{{post.title}}</h6>
+                <p>{{post.content | truncatechars:150}}...</p>
+                <p class="timestamp">Posted by {{post.author}} on {{post.timestamp}}</p>
+                <a href="/blog/{{post.slug}}" class="blog-btn">Read more...</a>
+            </div>
+        </div>
+
+        {% endfor %}
+
+
+    </div>
+    </div>
+</section>
+
+{% endblock body %}

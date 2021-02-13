@@ -5,38 +5,35 @@
 {% block body %}
 <section class="main-box">
 
-        <div class="main-container">
+    <div class="main-container">
 
-            <div class="main-text">
+        <div class="main-text">
 
-                <h1 class="blog-title">Our Blogs</h1>
+            <h1 class="blog-title">Our Blogs</h1>
 
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="popular-blogs">
-        <div class="main-container">
-            <h3>Our Popular Blogs</h3>
-            <div class="blog-container">
-
-                <div class="blog-card">
-                    <img src="../static/pexels-pixabay-261577.jpg" alt="">
-                    <div class="blog-info">
-                        <h6>Post Title</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem possimus blanditiis dolores
-                            fuga beatae, ea rerum excepturi cupiditate!</p>
-                        <a href="post.html" class="blog-btn">See more...</a>
-                    </div>
+<section class="popular-blogs">
+    <div class="main-container">
+        <h3>Our Popular Blogs</h3>
+        <div class="blog-container">
+            {% for post in allPosts %}
+            <div class="blog-card">
+                <div class="blog-info">
+                    <h6> <a href="/blog/{{post.slug}}" class="postTitle">{{post.title}}</a></h6>
+                    <p>{{post.content | truncatechars:150}}...</p>
+                    <p class="timestamp">Posted by {{post.author}} on {{post.timestamp}}</p>
+                    <a href="/blog/{{post.slug}}" class="blog-btn">Read more...</a>
                 </div>
-
-
-
-
             </div>
+
+            {% endfor %}
+
+
         </div>
-    </section>
+    </div>
+</section>
 
 {% endblock body %}
-
-    

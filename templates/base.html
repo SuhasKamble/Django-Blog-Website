@@ -21,11 +21,18 @@
             <li><a href="/about">About</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/contact">Contact</a></li>
+
+            {% if user.is_authenticated %}
+            <li><a style="color: tomato;" href="/logout">Logout {{request.user}}</a></li>
+
+            {% else %}
             <li><a href="/login">Login</a></li>
             <li><a href="/signup">Signup</a></li>
+            {% endif %}
+
             <li>
-                <form>
-                    <input name="search" placeholder="Search" id="search" type="text">
+                <form action="/search" method="GET">
+                    <input name="query" placeholder="Search" id="search" type="text">
                     <a role="button" href="#" id="search-btn" type="submit">Search </a>
                 </form>
             </li>

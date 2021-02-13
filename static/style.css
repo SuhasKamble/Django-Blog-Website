@@ -18,6 +18,13 @@ ul{
     max-width: 1200px;
     margin: 0 auto;
 }
+.postTitle{
+    color: black;
+}
+
+.postTitle:hover{
+    text-decoration: underline;
+}
 .logo h2{
     color: black;
 }
@@ -27,6 +34,8 @@ ul{
     font-size: 2rem;
     padding: 2rem 0;
 }
+
+
 
 .hero{
     height: 100vh;
@@ -120,6 +129,9 @@ ul{
     font-weight: 500;
     /* letter-spacing: 2px; */
     border-radius: 40px;
+    display: inline-block;
+    color: black;
+
     border: none;
     cursor: pointer;
     outline: none;
@@ -129,23 +141,29 @@ ul{
 
 }
 
+
 .btn:hover{
     letter-spacing: 2px;
 }
 
 .blog-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr ;
+    /* background: lightgray; */
+    width: 70%;
+    margin: auto;
 
 }
 .blog-card{
-    border: 1px solid black;
     margin: 1.5rem 1rem;
     height: auto;
+    border-bottom: 1px solid lightgray;
 }
 
 .blog-card img{
     width: 100%;
+    height: 200px;
+    object-fit: contain;
 }
 
 .blog-info{
@@ -153,18 +171,20 @@ ul{
 }
 
 .blog-info h6{
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
 }
 
+.timestamp{
+    margin-top: 15px;
+    color: gray;
+}
+
+
 .blog-btn{
-    padding: 0.5rem 1.3rem;
-    border-radius: 5px;
-    text-align: center;
-    background-color: #428bca;
-    color: #fff;
-    display: inline-block;
-    width: 100%;
-    margin-top: 1rem;
+  display: inline-block;
+  color:#428bca;
+  margin-top: 10px;
 }
 
 
@@ -384,5 +404,8 @@ footer p{
     }
     .about-wrapper img{
         height: 400px;
+    }
+    .blog-container{
+        width: 100%;
     }
 }
